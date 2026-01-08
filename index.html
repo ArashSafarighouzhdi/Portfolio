@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arash Safari | Front-End Developer</title>
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preload" as="image" href="./images/arash.webp" />
+    <script src="./js/script.js" defer></script>
+
+    <meta
+      name="description"
+      content="Arash Safari - Front-End Developer portfolio specializing in React, TypeScript, and modern web technologies."
+    />
+    <meta
+      name="keywords"
+      content="Front-End, Developer, JavaScript, React, TypeScript, Stockholm, Portfolio"
+    />
+    <meta name="author" content="Arash Safari" />
+    <meta property="og:title" content="Arash Safari | Front-End Developer" />
+    <meta
+      property="og:description"
+      content="Portfolio showcasing React, TypeScript, and modern web development projects."
+    />
+    <meta property="og:image" content="images/arash.png" />
+    <meta property="og:url" content="https://safariarash.dev" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
+
+    <header class="header">
+      <nav class="nav">
+        <span class="logo">Arash Safari</span>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+          <button id="menu-btn" aria-label="Toggle menu">☰</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero_wrapper">
+          <img
+            src="./images/arash.webp"
+            width="250"
+            height="250"
+            alt="Arash Safari"
+            class="hero_img"
+            id="heroImg"
+          />
+          <div class="border_circle"></div>
+        </div>
+        <h1>Hi, I'm <span>Arash</span></h1>
+        <p class="typed-text"></p>
+        <div class="hero-action">
+          <a
+            href="./assets/Arash_Safari_Frontend_Developer_CV.pdf"
+            download
+            class="cv-button"
+          >
+            Download CV <span>📥</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="about" class="section fade">
+        <h2>About Me</h2>
+        <p id="about-text"></p>
+        <div id="personal-meta-container"></div>
+      </section>
+
+      <section id="skills" class="section fade">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skill">
+            <span>HTML</span>
+            <div class="bar"><div data-level="95"></div></div>
+          </div>
+          <div class="skill">
+            <span>CSS / MUI</span>
+            <div class="bar"><div data-level="90"></div></div>
+          </div>
+          <div class="skill">
+            <span>JavaScript</span>
+            <div class="bar"><div data-level="85"></div></div>
+          </div>
+          <div class="skill">
+            <span>TypeScript</span>
+            <div class="bar"><div data-level="80"></div></div>
+          </div>
+          <div class="skill">
+            <span>React</span>
+            <div class="bar"><div data-level="80"></div></div>
+          </div>
+        </div>
+        <div id="extra-skills-container"></div>
+      </section>
+
+      <section id="projects" class="section fade">
+        <h2>Projects</h2>
+        <div id="projects-container" class="projects"></div>
+      </section>
+
+      <section id="resume" class="section fade">
+        <h2>Resume</h2>
+        <div class="resume-tabs">
+          <button class="tab-btn active" onclick="openTab('experience')">
+            Work Experience
+          </button>
+          <button class="tab-btn" onclick="openTab('education')">
+            Education
+          </button>
+        </div>
+
+        <div id="experience" class="tab-content active">
+          <div class="timeline">
+            <div class="timeline-item right">
+              <div class="content">
+                <h3>Frontend Developer (Internship)</h3>
+                <p class="company">
+                  Ecombooster | <span>Sollentuna, Sweden</span>
+                </p>
+                <span class="date">Feb 2024 - Aug 2024</span>
+                <p class="item-description">
+                  Developed high-performance E-commerce solutions focusing on
+                  efficient product information management.
+                </p>
+                <ul class="resume-list">
+                  <li>
+                    Built next-gen frontend with <strong>React</strong> and
+                    <strong>TypeScript</strong>.
+                  </li>
+                  <li>
+                    Improved UI/UX using <strong>Material-UI (MUI)</strong> and
+                    <strong>Figma</strong>.
+                  </li>
+                  <li>
+                    Coordinated features using
+                    <strong>Trunk-Based Development</strong> and Git.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item left">
+              <div class="content">
+                <h3>Frontend Developer</h3>
+                <p class="company">
+                  Persiana Software Group | <span>Tehran, Iran</span>
+                </p>
+                <span class="date">Jan 2021 - Mar 2023</span>
+                <p class="item-description">
+                  Designed and maintained scalable web applications for a
+                  diverse client base.
+                </p>
+                <ul class="resume-list">
+                  <li>
+                    Developed dynamic interfaces using
+                    <strong>JavaScript ES6</strong> and <strong>React</strong>.
+                  </li>
+                  <li>
+                    Reduced application bugs by 10% through code refinement and
+                    testing.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item right">
+              <div class="content">
+                <h3>Civil Engineer</h3>
+                <p class="company">Housing Foundation | <span>Iran</span></p>
+                <span class="date">Feb 2004 - May 2021</span>
+                <ul class="resume-list">
+                  <li>Managed mapping operations and Cadastral projects.</li>
+                  <li>
+                    Supervised large-scale housing construction and prepared
+                    technical instructions.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="education" class="tab-content">
+          <div class="timeline">
+            <div class="timeline-item right">
+              <div class="content">
+                <h3>Frontend Developer Degree</h3>
+                <p class="company">
+                  Futuregames | <span>Stockholm, Sweden</span>
+                </p>
+                <span class="date">2025 - 2027</span>
+                <p class="item-description">
+                  Focusing on advanced web technologies, Game UX, and
+                  interactive UI.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="content">
+                <h3>Bachelor of Civil Technology Engineering</h3>
+                <p class="company">
+                  University of Applied Science | <span>Iran</span>
+                </p>
+                <span class="date">2015 - 2017</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section fade">
+        <h2>What People Say</h2>
+        <div id="testimonial-container" class="testimonial-slider"></div>
+      </section>
+
+      <section id="contact" class="section fade">
+        <h2>Contact Me</h2>
+        <div class="contact-wrapper">
+          <div id="contact-info-container" class="contact-info"></div>
+
+          <form
+            action="https://formspree.io/f/mjgkndoy"
+            method="POST"
+            id="contact-form"
+          >
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input
+              type="email"
+              name="_replyto"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+
+            <input type="text" name="_gotcha" style="display: none" />
+
+            <button type="submit">Send Message</button>
+            <div id="form-status"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer fade">
+      <p>© 2026 Arash Safari</p>
+    </footer>
+
+    <div id="project-modal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <span class="close" title="Close Modal">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <div class="modal-footer">
+          <a id="modal-github" href="#" target="_blank">View Code</a>
+          <a id="modal-live" href="#" target="_blank">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
