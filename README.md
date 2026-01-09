@@ -83,7 +83,7 @@ Front-End Developer
 
 - Location: Stockholm, Sweden
 - Email: safari.arash@gmail.com
-- GitHub: https://github.com/ArashSafarighouzhdi
+- Linkedin: https://www.linkedin.com/in/safariarash/
 - Portfolio: https://www.safariarash.dev
 
 ---
