@@ -165,11 +165,14 @@ const testimonials = [
 ];
 function renderTestimonials() {
   const container = document.getElementById("testimonial-container");
-  if (!container) return;
+  const dotsContainer = document.getElementById("testimonial-dots");
+  if (!container || !dotsContainer) return;
   container.innerHTML = testimonials
     .map(
       (t, index) => `
-    <div class="testimonial-card ${index === 0 ? "active" : ""}">
+    <div class="testimonial-card ${
+      index === 0 ? "active" : ""
+    }" data-index="${index}">
       <p class="quote">"${t.text}"</p>
       <div class="testimonial-author">
         <strong>${t.name}</strong>
@@ -178,16 +181,37 @@ function renderTestimonials() {
     </div>`
     )
     .join("");
+
+  dotsContainer.innerHTML = testimonials
+    .map(
+      (_, index) => `
+    <span class="dot ${
+      index === 0 ? "active" : ""
+    }" onclick="goToSlide(${index})"></span>
+  `
+    )
+    .join("");
+
   let current = 0;
   const cards = document.querySelectorAll(".testimonial-card");
-  if (cards.length > 0) {
-    setInterval(() => {
-      cards[current].classList.remove("active");
-      current = (current + 1) % cards.length;
-      cards[current].classList.add("active");
-    }, 10000);
-  }
+  const dots = document.querySelectorAll(".dot");
+
+  window.goToSlide = function (index) {
+    cards[current].classList.remove("active");
+    dots[current].classList.remove("active");
+
+    current = index;
+
+    cards[current].classList.add("active");
+    dots[current].classList.add("active");
+  };
+
+  setInterval(() => {
+    let next = (current + 1) % cards.length;
+    goToSlide(next);
+  }, 10000);
 }
+
 const contactForm = document.getElementById("contact-form");
 contactForm?.addEventListener("submit", async (e) => {
   e.preventDefault();
